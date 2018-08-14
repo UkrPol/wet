@@ -69,8 +69,8 @@ function koef(koefvar) {
 <body>
 <center><font face="Arial" >
 <form name="calculator">
-<table style='font-family:"Courier New", Courier, monospace; font-size:100%' cellpadding="5">
-<tr><td colspan="5" align=center>Pозрахунок норми поливу:<br>Показання тензіометра в кПа:</td></tr>
+<table style='font-family:"Courier New", Courier, monospace; font-size:100%' cellpadding="4">
+<tr><td colspan="5" align=center>Pозрахунок норми поливу<br>Показання тензіометра в кПа:</td></tr>
 <tr>
 <td><label><input type="radio" id="kPa11" value="11" name="tenz" onclick="formula2()"/> 11</label></td> 
 <td><label><input type="radio" id="kPa12" value="12" name="tenz" onclick="formula2()"/> 12</label></td> 
@@ -100,18 +100,17 @@ function koef(koefvar) {
 <tr><td colspan="5" align=left><div style="display:none" id="hide30">введіть значення тензіометра (30-99):<input name="money" type="text" value="30"></div>
 <hr></td></tr>
 <tr>
-<td colspan="5"><label><input type="radio" id="vis1" value="4" name="raz10" onclick="formula1()" checked="checked"/> Цибуля ріпчаста, краплинне зрошення (h=0,50 м, S=0,56)</label></td>
+<td colspan="5"><label><input type="radio" id="vis1" value="4" name="raz10" onclick="formula1()" checked="checked"/> Цибуля ріпчаста, краплинне зрошення</label></td>
 </tr><tr>
-<td colspan="5"><label><input type="radio" id="vis2" value="5" name="raz10" onclick="formula1()"/> Картопля, дощування (h=0,30 м)</label></td>
+<td colspan="5"><label><input type="radio" id="vis2" value="5" name="raz10" onclick="formula1()"/> Картопля, дощування</label></td>
 </tr>
 <tr>
-<td colspan="5"><label><input type="radio" id="vis3" value="6" name="raz10" onclick="formula1()" /> Морква, краплинне зрошення (h=0,35 м, S=0,40)</label></td>
+<td colspan="5"><label><input type="radio" id="vis3" value="6" name="raz10" onclick="formula1()" /> Морква, краплинне зрошення</label></td>
 </tr><tr>
-<td colspan="5"><label><input type="radio" id="vis4" value="7" name="raz10" onclick="formula1()" /> Морква, дощування: (h=0,35 м)</label></td>
+<td colspan="5"><label><input type="radio" id="vis4" value="7" name="raz10" onclick="formula1()" /> Морква, дощування</label></td>
 </tr>
-
-<tr><td colspan="5" align=right><hr><i>коефіцієнт вологості: <output id="koef">83</output></i></td></tr>
-<tr><td colspan="5"><h1>Норма поливу, м3/га: <output id="norma">120</output></h1></td></tr>
+<tr><td colspan="5"><hr><b>Норма поливу, м3/га: <output id="norma">120</output></b></td></tr>
+<tr><td colspan="5" align=right><i>коефіцієнт вологості: <output id="koef">83</output></i></td></tr>
 </table></form>
 </font></center>
 
