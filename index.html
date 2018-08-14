@@ -1,0 +1,181 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+s = 0.56; h = 0.50;
+function formula1(){
+if (document.getElementById('vis1').checked){
+     var flag = document.getElementById('vis1').value;
+	 s = 0.56; h = 0.50; normapoliv(s,h);
+	 }
+if (document.getElementById('vis2').checked){
+     var flag = document.getElementById('vis2').value;
+	 s = 1; h = 0.30; normapoliv(s,h);
+	 }
+if (document.getElementById('vis3').checked){
+     var flag = document.getElementById('vis3').value;
+	 s = 0.40; h = 0.35; normapoliv(s,h);
+	 }
+if (document.getElementById('vis4').checked){
+	var flag = document.getElementById('vis4').value;
+	s = 1; h = 0.35; normapoliv(s,h);
+	}
+	
+ 
+}
+
+function formula2(){
+if (document.getElementById('kPa11').checked){document.getElementById('koef').innerHTML = koef(11);}
+if (document.getElementById('kPa12').checked){document.getElementById('koef').innerHTML = koef(12);}
+if (document.getElementById('kPa13').checked){document.getElementById('koef').innerHTML = koef(13);}
+if (document.getElementById('kPa14').checked){document.getElementById('koef').innerHTML = koef(14);}
+if (document.getElementById('kPa15').checked){document.getElementById('koef').innerHTML = koef(15);}
+if (document.getElementById('kPa16').checked){document.getElementById('koef').innerHTML = koef(16);}
+if (document.getElementById('kPa17').checked){document.getElementById('koef').innerHTML = koef(17);}
+if (document.getElementById('kPa18').checked){document.getElementById('koef').innerHTML = koef(18);}
+if (document.getElementById('kPa19').checked){document.getElementById('koef').innerHTML = koef(19);}
+if (document.getElementById('kPa20').checked){document.getElementById('koef').innerHTML = koef(20);}
+if (document.getElementById('kPa21').checked){document.getElementById('koef').innerHTML = koef(21);}
+if (document.getElementById('kPa22').checked){document.getElementById('koef').innerHTML = koef(22);}
+if (document.getElementById('kPa23').checked){document.getElementById('koef').innerHTML = koef(23);}
+if (document.getElementById('kPa24').checked){document.getElementById('koef').innerHTML = koef(24);}
+if (document.getElementById('kPa25').checked){document.getElementById('koef').innerHTML = koef(25);}
+if (document.getElementById('kPa26').checked){document.getElementById('koef').innerHTML = koef(26);}
+if (document.getElementById('kPa27').checked){document.getElementById('koef').innerHTML = koef(27);}
+if (document.getElementById('kPa28').checked){document.getElementById('koef').innerHTML = koef(28);}
+if (document.getElementById('kPa29').checked){document.getElementById('koef').innerHTML = koef(29.2);}
+//if (document.getElementById('kPa30').checked){document.getElementById('koef').innerHTML = koef(30);}
+ document.getElementById('hide30').style.display = 'none';  
+	normapoliv(s,h);
+}
+
+function change(idName) {document.getElementById(idName).style.display = ''; calculate();} //17.3 - ((document.getElementById('koef').value)/100) * 17.3))
+
+function normapoliv(s,h){normasum = Math.ceil(100 * h * 1.45 * s * (17.3 - (document.getElementById('koef').value / 100) * 17.3));
+						if(normasum > 0){document.getElementById('norma').innerHTML = normasum;}else{document.getElementById('norma').innerHTML = "0";}
+						}
+
+function koef(koefvar) {
+	var stepen = Math.pow(koefvar, -0.347);
+	koefvar = 2.304 * stepen;
+	koefvar = Math.round(parseFloat(koefvar) * 100);
+	return koefvar;
+
+}
+        
+</script>
+
+</head>
+<body>
+<center><font size="+2" face="Arial" >
+<h4>Pозрахунок норми поливу:</h4>
+<form name="calculator">
+<table style='font-family:"Courier New", Courier, monospace; font-size:100%' cellpadding="10">
+<tr><td colspan="5" align=center>Показання тензіометра в кПа:</td></tr>
+<tr>
+<td><label><input type="radio" id="kPa11" value="11" name="tenz" onclick="formula2()"/> 11</label></td> 
+<td><label><input type="radio" id="kPa12" value="12" name="tenz" onclick="formula2()"/> 12</label></td> 
+<td><label><input type="radio" id="kPa13" value="13" name="tenz" onclick="formula2()"/> 13</label></td> 
+<td><label><input type="radio" id="kPa14" value="14" name="tenz" onclick="formula2()"/> 14</label></td> 
+<td><label><input type="radio" id="kPa15" value="15" name="tenz" onclick="formula2()"/> 15</label></td> 
+</tr><tr>
+<td><label><input type="radio" id="kPa16" value="16" name="tenz" onclick="formula2()"/> 16</label></td> 
+<td><label><input type="radio" id="kPa17" value="17" name="tenz" onclick="formula2()"/> 17</label></td> 
+<td><label><input type="radio" id="kPa18" value="18" name="tenz" onclick="formula2()"/> 18</label></td> 
+<td bgcolor="#EEE"><label><input type="radio" checked id="kPa19" value="19" name="tenz" onclick="formula2()"/> 19</label></td> 
+<td><label><input type="radio" id="kPa20" value="20" name="tenz" onclick="formula2()"/> 20</label></td> 
+</tr>
+<tr>
+<td><label><input type="radio" id="kPa21" value="21" name="tenz" onclick="formula2()"/> 21</label></td> 
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa22" value="22" name="tenz" onclick="formula2()"/> 22</label></td> 
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa23" value="23" name="tenz" onclick="formula2()"/> 23</label></td> 
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa24" value="24" name="tenz" onclick="formula2()"/> 24</label></td> 
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa25" value="25" name="tenz" onclick="formula2()"/> 25</label></td> 
+</tr><tr>
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa26" value="26" name="tenz" onclick="formula2()"/> 26</label></td> 
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa27" value="27" name="tenz" onclick="formula2()"/> 27</label></td> 
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa28" value="28" name="tenz" onclick="formula2()"/> 28</label></td> 
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa29" value="29" name="tenz" onclick="formula2()"/> 29</label></td> 
+<td bgcolor="#FBF0DB"><label><input type="radio" id="kPa30" value="30" name="tenz" onclick="change('hide30')"/>> 30</label></td> 
+</tr>
+<tr><td colspan="5" align=left><div style="display:none" id="hide30">введіть значення тензіометра (30-99):<input name="money" type="text" value="30"></div>
+<hr></td></tr>
+<tr>
+<td colspan="5"><label><input type="radio" id="vis1" value="4" name="raz10" onclick="formula1()" checked="checked"/> Цибуля ріпчаста, краплинне зрошення (h=0,50 м, S=0,56)</label></td>
+</tr><tr>
+<td colspan="5"><label><input type="radio" id="vis2" value="5" name="raz10" onclick="formula1()"/> Картопля, дощування (h=0,30 м)</label></td>
+</tr>
+<tr>
+<td colspan="5"><label><input type="radio" id="vis3" value="6" name="raz10" onclick="formula1()" /> Морква, краплинне зрошення (h=0,35 м, S=0,40)</label></td>
+</tr><tr>
+<td colspan="5"><label><input type="radio" id="vis4" value="7" name="raz10" onclick="formula1()" /> Морква, дощування: (h=0,35 м)</label></td>
+</tr>
+
+<tr><td colspan="5" align=right><hr><i>коефіцієнт вологості: <output id="koef">83</output></i></td></tr>
+<tr><td colspan="5"><h1>Норма поливу, м3/га: <output id="norma">120</output></h1></td></tr>
+</table></form>
+</font></center>
+
+  <table id="diagram">
+    <tr>
+      <th id="money-after"></th>
+    </tr>
+  </table>
+ <script>
+    // event.type должен быть keypress
+    function getChar(event) {
+      if (event.which == null) {
+        if (event.keyCode < 32) return null;
+        return String.fromCharCode(event.keyCode) // IE
+      }
+
+      if (event.which != 0 && event.charCode != 0) {
+        if (event.which < 32) return null;
+        return String.fromCharCode(event.which) // остальные
+      }
+
+      return null; // специальная клавиша
+    }
+
+    var form = document.forms.calculator;
+
+
+    var moneyElem = form.elements.money;
+    moneyElem.onkeypress = function(e) {
+      e = e || event;
+      var chr = getChar(e);
+
+      if (e.ctrlKey || e.altKey || chr == null) return; // специальная клавиша
+      if (chr < '0' || chr > '9') return false;
+    }
+
+    // клавиатура, вставить/вырезать клавиатурой
+    moneyElem.onkeyup = calculate;
+
+    // любые действия, кроме IE. В IE9 также работает, кроме удаления
+    moneyElem.oninput = calculate;
+
+    moneyElem.onpropertychange = function() { // для IE8- изменение значения, кроме удаления
+      event.propertyName == "value" && calculate();
+    }
+
+    
+    function calculate() {
+      var sum = +moneyElem.value;
+      if (!sum) return;
+
+      var stepen = Math.pow(sum, -0.347);
+
+      sum = 2.304 * stepen;
+      sum = Math.round(parseFloat(sum) * 100);
+
+      //document.getElementById('money-after').innerHTML = sum;
+	  document.getElementById('koef').innerHTML = sum;
+	  normapoliv(s,h);
+    }
+
+    //calculate();
+	
+  </script>
+</body>
+</html>
